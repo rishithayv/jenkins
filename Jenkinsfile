@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -10,19 +11,19 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                sh 'python app.py'
+                bat 'python app.py'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'python -m pytest'
+                bat 'python -m pytest'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'echo Building application'
+                bat 'echo Building application'
             }
         }
     }
