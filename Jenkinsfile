@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     stages {
-
         stage('Checkout') {
             steps {
                 checkout scm
@@ -11,19 +10,19 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                sh 'python3 app.py'
+                sh 'python app.py'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'python3 test.py'
+                sh 'python -m pytest'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Build completed successfully'
+                sh 'echo Building application'
             }
         }
     }
@@ -32,7 +31,6 @@ pipeline {
         success {
             echo 'Jenkins Build Successful'
         }
-
         failure {
             echo 'Jenkins Build Failed'
         }
