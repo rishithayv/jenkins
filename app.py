@@ -1,6 +1,6 @@
 print("Hello from Python Application")
 
-name = "Rishitha"
+name = "VVCE"
 
 print("Welcome to", name)
 print("Application executed successfully")
