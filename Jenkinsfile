@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'javac -version'
-                sh 'javac App.java AppTest.java'
+                bat 'javac -version'
+                bat 'javac App.java AppTest.java'
             }
         }
         stage('Test') {
-            steps { sh 'java AppTest' }
+            steps { bat 'java AppTest' }
         }
     }
 
