@@ -13,7 +13,7 @@ pipeline {
             }
         }
         stage('Test') {
-            steps { bat 'java AppTest' }
+            steps { sh 'java AppTest' }
         }
     }
 
