@@ -1,8 +1,9 @@
 public class App {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
     public static void main(String[] args) {
-        int a = 7;
-        int b = 10;
-        int sum = a + b;
-        System.out.println("Sum = " + sum);
+        System.out.println("88 + 90 = " + add(88, 90));
     }
 }
